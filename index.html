@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Anindo Barua Bijoy — AI Engineer, NLP Researcher, Competitive Programmer. BSc CSE student at CUET and Project Associate at Dotlines Bangladesh.">
+    <title>Anindo Barua Bijoy | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">⚡</span> Bijoy
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h3 class="hero-greeting">Hi There,</h3>
+                <h1 class="hero-title">I'm Anindo <span class="highlight">Bijoy</span></h1>
+                <h2 class="hero-subtitle">I Am Into <span class="typed-text" id="typed-text"></span><span
+                        class="cursor">|</span></h2>
+                <a href="#about" class="btn-primary">
+                    About Me <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/Ab-bijoy" target="_blank" rel="noopener" class="social-icon"
+                        title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/anindo-barua-9167842b1" target="_blank" rel="noopener"
+                        class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/anindo.bijoy.3" target="_blank" rel="noopener" class="social-icon"
+                        title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/anindo_bijoy" target="_blank" rel="noopener" class="social-icon"
+                        title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.gg/QyxdHnsC" target="_blank" rel="noopener" class="social-icon"
+                        title="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="Anindo.png" alt="Anindo Barua Bijoy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <img src="Anindo.png" alt="Anindo Barua Bijoy" />
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm <strong>Anindo Barua Bijoy</strong>, a BSc Computer Science student at
+                        <strong>Chittagong University of Engineering and Technology (CUET)</strong>.
+                        Currently working as a <strong>Project Associate (R&D)</strong> at Dotlines Bangladesh,
+                        drawing on my former RA experience at Hackules Inc.
+                    </p>
+                    <p class="about-text">
+                        I specialize in <strong>NLP</strong>, specifically detecting AI-generated content using
+                        Transformer Models. I'm passionate about merging <strong>AI Engineering with DevOps
+                            (MLOps)</strong>,
+                        building scalable ML pipelines, and contributing to open-source NLP/Computer Vision tools.
+                    </p>
+                    <p class="about-text">
+                        I've solved over <strong>1,000+ competitive programming problems</strong> across platforms like
+                        Codeforces, LeetCode, and CodeChef!
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">26+</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy" target="_blank" class="btn-primary">
+                        View GitHub <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python</span><span>90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>C++</span><span>85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-brain"></i> AI / ML Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>PyTorch</span><span>88%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>TensorFlow</span><span>80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>NLP / Transformers</span><span>85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-server"></i> DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Docker</span><span>75%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git & GitHub</span><span>90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>CI/CD Pipelines</span><span>70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title"><i class="fas fa-trophy"></i> Competitive Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Codeforces</span><span>85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>LeetCode</span><span>88%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>CodeChef</span><span>80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Education</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Currently Pursuing</div>
+                        <h3 class="timeline-title">BSc in Computer Science & Engineering</h3>
+                        <h4 class="timeline-subtitle">Chittagong University of Engineering & Technology (CUET)</h4>
+                        <p class="timeline-text">
+                            Focusing on Artificial Intelligence, Machine Learning, Natural Language Processing,
+                            and Computer Vision. Active in competitive programming and research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work / Projects Section -->
+    <section class="section work" id="work">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="project-title">Text Summarizer</h3>
+                    <p class="project-desc">An NLP-based text summarization tool built with Jupyter Notebook and modern
+                        NLP techniques.</p>
+                    <div class="project-tags">
+                        <span class="tag">Jupyter Notebook</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy/Text-summerizer" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="project-title">AI Development Projects</h3>
+                    <p class="project-desc">Collection of AI development projects showcasing various machine learning
+                        and deep learning applications.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">AI/ML</span>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy/AI-development-projects" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-search"></i></div>
+                    <h3 class="project-title">Detecting AI-Generated Reviews</h3>
+                    <p class="project-desc">Research project on detecting AI-generated product reviews using Transformer
+                        models and NLP.</p>
+                    <div class="project-tags">
+                        <span class="tag">Jupyter Notebook</span>
+                        <span class="tag">Transformers</span>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy/Detecting_AI-generated-product-reviews" target="_blank"
+                        class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 class="project-title">Git Hooks</h3>
+                    <p class="project-desc">Learning and implementing Git hooks for Python projects — DevOps automation
+                        practices.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">DevOps</span>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy/Git_hooks" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="project-title">NeetCode 150</h3>
+                    <p class="project-desc">Solutions to the NeetCode 150 problem set — competitive programming practice
+                        in C++.</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">DSA</span>
+                    </div>
+                    <a href="https://github.com/Ab-bijoy/NeetCode-150" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Current</div>
+                        <h3 class="timeline-title">Project Associate (R&D)</h3>
+                        <h4 class="timeline-subtitle">Dotlines Bangladesh</h4>
+                        <p class="timeline-text">
+                            Working on Research & Development projects, focusing on AI Engineering,
+                            NLP applications, and scalable ML pipelines. Building AI-powered solutions
+                            and automating model deployment workflows.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Previous</div>
+                        <h3 class="timeline-title">Research Assistant</h3>
+                        <h4 class="timeline-subtitle">Hackules Inc.</h4>
+                        <p class="timeline-text">
+                            Contributed to AI research projects, conducted experiments with Transformer models,
+                            and assisted in developing NLP tools for detecting AI-generated content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>Feel free to reach out for collaboration, project discussions, or just to say hello!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/Ab-bijoy" target="_blank">github.com/Ab-bijoy</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://linkedin.com/in/anindo-barua-9167842b1" target="_blank">LinkedIn
+                                Profile</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-facebook-f"></i>
+                            <a href="https://www.facebook.com/anindo.bijoy.3" target="_blank">Facebook</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/anindo_bijoy" target="_blank">Instagram</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-discord"></i>
+                            <a href="https://discord.gg/QyxdHnsC" target="_blank">Discord Server</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Anindo Barua Bijoy. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Ab-bijoy" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/anindo-barua-9167842b1" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/anindo.bijoy.3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/anindo_bijoy" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://discord.gg/QyxdHnsC" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
