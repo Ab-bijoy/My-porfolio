@@ -866,6 +866,230 @@ img {
 }
 
 /* ===================================
+   Competitive Programming Section
+   =================================== */
+.cp-section {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.cp-section .section-title {
+    color: var(--white);
+}
+
+.cp-section .highlight {
+    background: linear-gradient(135deg, #FFD700, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cp-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: -40px;
+    margin-bottom: 48px;
+    line-height: 1.8;
+}
+
+.cp-subtitle strong {
+    color: var(--primary-light);
+}
+
+.cp-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 48px;
+}
+
+.cp-card {
+    position: relative;
+    background: var(--navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius);
+    padding: 32px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cp-card__glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.cp-card:hover .cp-card__glow {
+    opacity: 1;
+}
+
+.cp-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Platform-specific colors */
+.cp-card--codeforces .cp-card__glow { background: radial-gradient(circle, rgba(59, 130, 246, 0.08), transparent 60%); }
+.cp-card--codeforces .cp-card__icon { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.cp-card--codeforces:hover { border-color: rgba(59, 130, 246, 0.3); }
+
+.cp-card--codechef .cp-card__glow { background: radial-gradient(circle, rgba(180, 130, 70, 0.08), transparent 60%); }
+.cp-card--codechef .cp-card__icon { background: rgba(180, 130, 70, 0.15); color: #d4a574; }
+.cp-card--codechef:hover { border-color: rgba(180, 130, 70, 0.3); }
+
+.cp-card--leetcode .cp-card__glow { background: radial-gradient(circle, rgba(255, 165, 0, 0.08), transparent 60%); }
+.cp-card--leetcode .cp-card__icon { background: rgba(255, 165, 0, 0.15); color: #ffa500; }
+.cp-card--leetcode:hover { border-color: rgba(255, 165, 0, 0.3); }
+
+.cp-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.cp-card__platform {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.cp-card__handle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+.cp-card__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin: 4px 0;
+}
+
+.cp-card__rating-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cp-card__rating-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+}
+
+.cp-card__badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.cp-card__badge--expert {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.cp-card__badge--3star {
+    background: linear-gradient(135deg, rgba(180, 130, 70, 0.2), rgba(180, 130, 70, 0.1));
+    color: #d4a574;
+    border: 1px solid rgba(180, 130, 70, 0.3);
+}
+
+.cp-card__badge--leetcode {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.1));
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.cp-card__arrow {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.cp-card:hover .cp-card__arrow {
+    color: var(--primary-light);
+    transform: translate(3px, -3px);
+}
+
+/* Total Stats Bar */
+.cp-total-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cp-total-stat {
+    background: var(--navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.cp-total-stat:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 107, 53, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cp-total-stat i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.cp-total-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+}
+
+.cp-total-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ===================================
    Footer
    =================================== */
 .footer {
@@ -939,6 +1163,16 @@ img {
 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cp-profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cp-profiles-grid .cp-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        justify-self: center;
     }
 }
 
@@ -1018,6 +1252,18 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .cp-profiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cp-profiles-grid .cp-card:last-child {
+        max-width: 100%;
+    }
+
+    .cp-total-stats {
+        grid-template-columns: 1fr;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -1049,5 +1295,13 @@ img {
     .image-wrapper {
         width: 220px;
         height: 220px;
+    }
+
+    .cp-card__rating-value {
+        font-size: 1.6rem;
+    }
+
+    .cp-total-number {
+        font-size: 1.6rem;
     }
 }
